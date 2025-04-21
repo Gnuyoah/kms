@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMS 激活工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>KMS 激活工具</h1>
+            <p>选择你的产品，获取激活命令</p>
+        </header>
+
+        <main>
+            <div class="product-selector">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="windows">Windows</button>
+                    <button class="tab-btn" data-tab="office">Office</button>
+                </div>
+
+                <div class="tab-content active" id="windows-tab">
+                    <div class="selection-group">
+                        <label for="windows-version">选择 Windows 版本:</label>
+                        <select id="windows-version">
+                            <option value="">-- 请选择 --</option>
+                            <optgroup label="Windows 11 和 Windows 10">
+                                <option value="windows-11-10-pro">Windows 10/11 专业版</option>
+                                <option value="windows-11-10-pro-n">Windows 10/11 专业版 N</option>
+                                <option value="windows-11-10-pro-workstation">Windows 10/11 专业工作站</option>
+                                <option value="windows-11-10-pro-workstation-n">Windows 10/11 专业工作站 N</option>
+                                <option value="windows-11-10-pro-education">Windows 10/11 专业教育版</option>
+                                <option value="windows-11-10-pro-education-n">Windows 10/11 专业教育版 N</option>
+                                <option value="windows-11-10-education">Windows 10/11 教育版</option>
+                                <option value="windows-11-10-education-n">Windows 10/11 教育版 N</option>
+                                <option value="windows-11-10-enterprise">Windows 10/11 企业版</option>
+                                <option value="windows-11-10-enterprise-n">Windows 10/11 企业版 N</option>
+                                <option value="windows-11-10-enterprise-g">Windows 10/11 企业版 G</option>
+                                <option value="windows-11-10-enterprise-g-n">Windows 10/11 企业版 G N</option>
+                            </optgroup>
+                            <optgroup label="Windows 10 LTSC/LTSB">
+                                <option value="windows-10-ltsc-2019">Windows 10 企业版 LTSC 2019</option>
+                                <option value="windows-10-ltsc-2019-n">Windows 10 企业版 N LTSC 2019</option>
+                                <option value="windows-10-ltsb-2016">Windows 10 企业版 LTSB 2016</option>
+                                <option value="windows-10-ltsb-2016-n">Windows 10 企业版 N LTSB 2016</option>
+                                <option value="windows-10-ltsb-2015">Windows 10 企业版 2015 LTSB</option>
+                                <option value="windows-10-ltsb-2015-n">Windows 10 企业版 2015 LTSB N</option>
+                            </optgroup>
+                            <optgroup label="Windows Server">
+                                <option value="windows-server-2025-standard">Windows Server 2025 Standard</option>
+                                <option value="windows-server-2025-datacenter">Windows Server 2025 Datacenter</option>
+                                <option value="windows-server-2025-datacenter-azure">Windows Server 2025 Datacenter: Azure Edition</option>
+                                <option value="windows-server-2022-standard">Windows Server 2022 Standard</option>
+                                <option value="windows-server-2022-datacenter">Windows Server 2022 Datacenter</option>
+                                <option value="windows-server-2022-datacenter-azure">Windows Server 2022 Datacenter: Azure Edition</option>
+                                <option value="windows-server-2019-standard">Windows Server 2019 Standard</option>
+                                <option value="windows-server-2019-datacenter">Windows Server 2019 Datacenter</option>
+                                <option value="windows-server-2019-essentials">Windows Server 2019 Essentials</option>
+                                <option value="windows-server-2016-standard">Windows Server 2016 Standard</option>
+                                <option value="windows-server-2016-datacenter">Windows Server 2016 Datacenter</option>
+                                <option value="windows-server-2016-essentials">Windows Server 2016 Essentials</option>
+                            </optgroup>
+                            <optgroup label="旧版 Windows">
+                                <option value="windows-8.1-pro">Windows 8.1 专业版</option>
+                                <option value="windows-8.1-enterprise">Windows 8.1 企业版</option>
+                                <option value="windows-8-pro">Windows 8 专业版</option>
+                                <option value="windows-8-enterprise">Windows 8 企业版</option>
+                                <option value="windows-7-pro">Windows 7 专业版</option>
+                                <option value="windows-7-enterprise">Windows 7 企业版</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="selection-group">
+                        <label for="kms-server">KMS 服务器:</label>
+                        <select id="kms-server">
+                            <option value="skms.netnr.eu.org">skms.netnr.eu.org</option>
+                            <option value="kms.0t.net.cn">kms.0t.net.cn</option>
+                            <option value="custom">自定义...</option>
+                        </select>
+                        <input type="text" id="custom-kms-server" placeholder="输入自定义 KMS 服务器地址" style="display: none;">
+                    </div>
+                </div>
+
+                <div class="tab-content" id="office-tab">
+                    <div class="selection-group">
+                        <label for="office-path">Office 安装路径:</label>
+                        <select id="office-path">
+                            <option value="C:\Program Files (x86)\Microsoft Office\Office16">C:\Program Files (x86)\Microsoft Office\Office16 (32位 Office 2016)</option>
+                            <option value="C:\Program Files\Microsoft Office\Office16">C:\Program Files\Microsoft Office\Office16 (64位 Office 2016)</option>
+                            <option value="C:\Program Files (x86)\Microsoft Office\Office15">C:\Program Files (x86)\Microsoft Office\Office15 (32位 Office 2013)</option>
+                            <option value="C:\Program Files\Microsoft Office\Office15">C:\Program Files\Microsoft Office\Office15 (64位 Office 2013)</option>
+                            <option value="C:\Program Files (x86)\Microsoft Office\Office14">C:\Program Files (x86)\Microsoft Office\Office14 (32位 Office 2010)</option>
+                            <option value="C:\Program Files\Microsoft Office\Office14">C:\Program Files\Microsoft Office\Office14 (64位 Office 2010)</option>
+                            <option value="custom">自定义...</option>
+                        </select>
+                        <input type="text" id="custom-office-path" placeholder="输入自定义 Office 安装路径" style="display: none;">
+                    </div>
+
+                    <div class="selection-group">
+                        <label for="kms-server-office">KMS 服务器:</label>
+                        <select id="kms-server-office">
+                            <option value="skms.netnr.eu.org">skms.netnr.eu.org</option>
+                            <option value="kms.0t.net.cn">kms.0t.net.cn</option>
+                            <option value="custom">自定义...</option>
+                        </select>
+                        <input type="text" id="custom-kms-server-office" placeholder="输入自定义 KMS 服务器地址" style="display: none;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="activation-commands">
+                <h2>激活命令</h2>
+                <p class="note">请以管理员身份运行命令提示符或 PowerShell，然后执行以下命令:</p>
+                
+                <div id="commands-container">
+                    <div class="command-section">
+                        <div class="command-info">
+                            <span>请先选择产品以生成激活命令</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="copy-all-btn" class="copy-btn" disabled>复制全部命令</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>注意: KMS 激活有 180 天期限，系统会每 7 天自动尝试续订激活，只要不超过 180 天无法连接 KMS 服务器，系统将保持激活状态。</p>
+            <p>本工具基于 <a href="https://github.com/Wind4/vlmcsd" target="_blank">vlmcsd</a> 项目，仅供学习研究使用。</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
