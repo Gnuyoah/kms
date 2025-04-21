@@ -123,3 +123,4 @@ KMS (Key Management Service) 是微软用于批量激活的技术。本项目模
 
 - [vlmcsd 原始项目](https://github.com/Wind4/vlmcsd)
 - [Microsoft KMS 文档](https://docs.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys) 
+- [Microsoft office 文档](https://learn.microsoft.com/en-us/office/volume-license-activation/gvlks) 
